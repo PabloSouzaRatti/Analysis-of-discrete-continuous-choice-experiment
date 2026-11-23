@@ -37,10 +37,6 @@ The analysis uses `Apollo`, `dplyr`, `tidyr`, `stringr`, `tibble`, `sandwich`, `
 
 The public dataset does not contain `House_LandOwn` or `House_AgriExp`. These fields are omitted from the supplementary perceived-risk regression and class-profile table rather than being inferred from other variables. Consequently, those public-data supplementary specifications are reduced relative to analyses that used the non-public source file. The two scripts do not reconstruct these unavailable variables.
 
-The released minimum coordinated area level of 75 ha is retained as coded in the dataset. The design-generation syntax itself is not needed to rerun the analyses because the final choice-task attributes are included in the public CSV.
-
-The intensity script retains the supplied land-entry correction: when reported enrolled land exceeds owned land, the value is repeatedly divided by ten until it no longer exceeds available owned land. This is a consequential data-cleaning rule from the analysis code and should be reviewed against the questionnaire/export conventions before publication. The scripts print diagnostics for remaining out-of-range records.
-
 ## Outputs
 
 Generated files are written beneath `results/` (Apollo estimation outputs, serialized bundles, intensity results, supplementary tables, and figures). The CSV used for estimation is written beneath `data/`. The repository `.gitignore` excludes generated results and that derived CSV; the original public dataset remains included.
