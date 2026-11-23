@@ -1,0 +1,3 @@
+results/*
+!results/.gitkeep
+data/estimation_ready.csv
